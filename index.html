@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Java Features Mindmap (Interactive)</title>
+<style>
+  :root { --bg: #071022; --card: #0f1724; --text: #eaf2ff; --muted: #9fb0d9; --ring: #23324a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Inter, Roboto, system-ui, -apple-system, "Segoe UI", Arial; background: radial-gradient(1200px 800px at 10% -20%, #0e1a36, #071022); color: var(--text); }
+  header { padding: 24px 20px 8px; }
+  h1 { margin: 0 0 6px; font-size: 28px; }
+  p.subtitle { margin: 0; color: var(--muted); font-size: 14px; }
+  .container { padding: 16px 20px 40px; }
+  .card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid var(--ring); border-radius: 16px; padding: 16px; max-width: 1100px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+  .tree { list-style: none; padding-left: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 8px 16px; }
+  .tree > li { background: var(--card); border: 1px solid var(--ring); border-radius: 12px; padding: 10px 12px; }
+  .node > .cat { font-weight: 600; font-size: 15px; }
+  .toggle { margin-right: 8px; width: 26px; height: 26px; border-radius: 8px; background: #071024; color: var(--text); border: 1px solid var(--ring); cursor: pointer; font-weight: 700; line-height: 1; }
+  ul.collapsed { display: none; }
+  ul.expanded { display: block; margin: 8px 0 0 34px; padding-left: 10px; border-left: 2px solid #23324a; }
+  li.leaf { margin: 6px 0; color: var(--muted); font-size: 14px; }
+  .controls { display: flex; gap: 8px; margin: 10px 0 14px 2px; }
+  .btn { padding: 8px 10px; border-radius: 8px; border: 1px solid var(--ring); background: #08102a; color: var(--text); cursor: pointer; }
+  footer { margin-top: 12px; color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Java Features Mindmap</h1>
+    <p class="subtitle">Click any category to expand/collapse. Use the controls to manage all.</p>
+  </header>
+  <div class="container">
+    <div class="card">
+      <div class="controls">
+        <button class="btn" id="expandAll">Expand all</button>
+        <button class="btn" id="collapseAll">Collapse all</button>
+      </div>
+      <ul class="tree">
+        
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Core_Language_Features">+</button>
+      <span class="cat">Core Language Features</span>
+      <ul id="Core_Language_Features" class="collapsed">
+        <li class='leaf'>Variables and primitive data types (int, float, double, char, boolean, byte, short, long)</li>
+<li class='leaf'>Constants and final keyword</li>
+<li class='leaf'>Operators (arithmetic, logical, bitwise, assignment, comparison, conditional)</li>
+<li class='leaf'>Control flow (if/else, switch, for, while, do-while)</li>
+<li class='leaf'>Methods & overloading</li>
+<li class='leaf'>Arrays & multidimensional arrays</li>
+<li class='leaf'>String handling & String pool</li>
+<li class='leaf'>Type casting & conversion</li>
+<li class='leaf'>Wrapper classes, Varargs, Enhanced for loop</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Object-Oriented_Programming">+</button>
+      <span class="cat">Object-Oriented Programming</span>
+      <ul id="Object-Oriented_Programming" class="collapsed">
+        <li class='leaf'>Classes & objects, Constructors & chaining, Instance vars & methods</li>
+<li class='leaf'>Access modifiers, Inheritance (extends), Method overriding & super</li>
+<li class='leaf'>Abstract classes & methods, Interfaces & implements, Inner classes</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Advanced_OOP_Features">+</button>
+      <span class="cat">Advanced OOP Features</span>
+      <ul id="Advanced_OOP_Features" class="collapsed">
+        <li class='leaf'>Polymorphism, Encapsulation, Abstraction, Composition, Covariant returns</li>
+<li class='leaf'>Default/static/private methods in interfaces</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Exception_Handling">+</button>
+      <span class="cat">Exception Handling</span>
+      <ul id="Exception_Handling" class="collapsed">
+        <li class='leaf'>Try-catch-finally, throw/throws, Checked vs unchecked, Custom exceptions</li>
+<li class='leaf'>Try-with-resources, Multi-catch, Suppressed exceptions</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Generics_and_Type_Safety">+</button>
+      <span class="cat">Generics and Type Safety</span>
+      <ul id="Generics_and_Type_Safety" class="collapsed">
+        <li class='leaf'>Generic classes & methods, Bounded type parameters, Wildcards, Type erasure</li>
+<li class='leaf'>Diamond operator, Raw types</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Collections_Framework">+</button>
+      <span class="cat">Collections Framework</span>
+      <ul id="Collections_Framework" class="collapsed">
+        <li class='leaf'>List/Set/Map implementations (ArrayList, HashSet, HashMap, TreeMap...)</li>
+<li class='leaf'>Queue/Deque, Iterators, Comparable & Comparator, Concurrent collections</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Functional_Programming_(Java_8+)">+</button>
+      <span class="cat">Functional Programming (Java 8+)</span>
+      <ul id="Functional_Programming_(Java_8+)" class="collapsed">
+        <li class='leaf'>Lambdas, Functional interfaces, Method references, Stream API, Optional, Collectors</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Input/Output_(I/O)">+</button>
+      <span class="cat">Input/Output (I/O)</span>
+      <ul id="Input/Output_(I/O)" class="collapsed">
+        <li class='leaf'>File handling, Streams, Reader/Writer, Buffered I/O, Serialization, NIO (Path/Files)</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Multithreading_and_Concurrency">+</button>
+      <span class="cat">Multithreading and Concurrency</span>
+      <ul id="Multithreading_and_Concurrency" class="collapsed">
+        <li class='leaf'>Thread/Runnable, Synchronization, Executor framework, Thread pools, Atomic classes, CompletableFuture</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Memory_Management">+</button>
+      <span class="cat">Memory Management</span>
+      <ul id="Memory_Management" class="collapsed">
+        <li class='leaf'>Heap vs stack, Garbage collection, Weak/Soft/Phantom references, finalize (deprecated)</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Reflection_and_Introspection">+</button>
+      <span class="cat">Reflection and Introspection</span>
+      <ul id="Reflection_and_Introspection" class="collapsed">
+        <li class='leaf'>Class loading, Runtime type info, Dynamic invocation, Annotations, Proxy classes</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Annotations">+</button>
+      <span class="cat">Annotations</span>
+      <ul id="Annotations" class="collapsed">
+        <li class='leaf'>Built-in annotations, Custom annotations, Retention, Target, Repeatable, Type annotations</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Java_8_Features">+</button>
+      <span class="cat">Java 8 Features</span>
+      <ul id="Java_8_Features" class="collapsed">
+        <li class='leaf'>Lambdas, Stream API, Optional, Default/static interface methods, Date/Time API</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Java_9_Features">+</button>
+      <span class="cat">Java 9 Features</span>
+      <ul id="Java_9_Features" class="collapsed">
+        <li class='leaf'>Module system, JShell, Private interface methods, Process API improvements, Reactive Streams</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Java_10-11_Features">+</button>
+      <span class="cat">Java 10-11 Features</span>
+      <ul id="Java_10-11_Features" class="collapsed">
+        <li class='leaf'>var (local type inference), HTTP Client API, String/File utility methods, Collection.toArray()</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Java_12-17_Features">+</button>
+      <span class="cat">Java 12-17 Features</span>
+      <ul id="Java_12-17_Features" class="collapsed">
+        <li class='leaf'>Switch expressions, Text blocks, Pattern matching, Records, Sealed classes, Foreign Function API</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Java_17_Features_(LTS)">+</button>
+      <span class="cat">Java 17 Features (LTS)</span>
+      <ul id="Java_17_Features_(LTS)" class="collapsed">
+        <li class='leaf'>Sealed classes finalized, Pattern matching finalized, FFM API (incubating), Enhanced PRNGs</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Java_18+_Features">+</button>
+      <span class="cat">Java 18+ Features</span>
+      <ul id="Java_18+_Features" class="collapsed">
+        <li class='leaf'>Pattern matching for switch (preview), Vector API, Simple web server, UTF-8 default, Virtual threads</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Standard_Library_and_APIs">+</button>
+      <span class="cat">Standard Library and APIs</span>
+      <ul id="Standard_Library_and_APIs" class="collapsed">
+        <li class='leaf'>java.lang, java.util, java.io, java.nio, java.net, java.sql, java.time, java.util.concurrent, streams</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Networking">+</button>
+      <span class="cat">Networking</span>
+      <ul id="Networking" class="collapsed">
+        <li class='leaf'>Sockets, URL/URLConnection, HTTP connections, Server/Datagram sockets, HTTP Client API</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Database_Connectivity">+</button>
+      <span class="cat">Database Connectivity</span>
+      <ul id="Database_Connectivity" class="collapsed">
+        <li class='leaf'>JDBC API, Connection/Statement/PreparedStatement, ResultSet, Drivers, Connection pooling</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Security_Features">+</button>
+      <span class="cat">Security Features</span>
+      <ul id="Security_Features" class="collapsed">
+        <li class='leaf'>Security model, SecurityManager, JCA, SSL/TLS, Access control and authentication</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Internationalization">+</button>
+      <span class="cat">Internationalization</span>
+      <ul id="Internationalization" class="collapsed">
+        <li class='leaf'>Locale, ResourceBundle, Formatting, Currency handling, Encoding support</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Regular_Expressions">+</button>
+      <span class="cat">Regular Expressions</span>
+      <ul id="Regular_Expressions" class="collapsed">
+        <li class='leaf'>Pattern & Matcher, Regex syntax, Group capturing and replacement</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="JVM_Features">+</button>
+      <span class="cat">JVM Features</span>
+      <ul id="JVM_Features" class="collapsed">
+        <li class='leaf'>JIT compilation, Class loading, Bytecode, GC algorithms, JVM tuning & monitoring</li>
+      </ul>
+    </li>
+    
+    <li class="node">
+      <button class="toggle" aria-expanded="false" aria-controls="Development_Tools_Integration">+</button>
+      <span class="cat">Development Tools Integration</span>
+      <ul id="Development_Tools_Integration" class="collapsed">
+        <li class='leaf'>JAR/WAR, Classpath/module path, Javadoc, Unit testing, Build tools (Maven/Gradle)</li>
+      </ul>
+    </li>
+    
+      </ul>
+      <footer>Built for quick revision • Keyboard: press <b>E</b> to expand all, <b>C</b> to collapse all.</footer>
+    </div>
+  </div>
+
+<script>
+  function setAll(expand) {
+    document.querySelectorAll('.toggle').forEach(btn => {
+      const target = document.getElementById(btn.getAttribute('aria-controls'));
+      if (!target) return;
+      target.className = expand ? 'expanded' : 'collapsed';
+      btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
+      btn.textContent = expand ? '−' : '+';
+    });
+  }
+
+  document.querySelectorAll('.toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = document.getElementById(btn.getAttribute('aria-controls'));
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        target.className = 'collapsed';
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = '+';
+      } else {
+        target.className = 'expanded';
+        btn.setAttribute('aria-expanded', 'true');
+        btn.textContent = '−';
+      }
+    });
+  });
+
+  document.getElementById('expandAll').addEventListener('click', () => setAll(true));
+  document.getElementById('collapseAll').addEventListener('click', () => setAll(false));
+  document.addEventListener('keydown', (e) => { if (e.key.toLowerCase() === 'e') setAll(true); if (e.key.toLowerCase() === 'c') setAll(false); });
+</script>
+</body>
+</html>
